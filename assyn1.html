@@ -1,0 +1,33 @@
+<!-- Await Syntax
+The await keyword can only be used inside an async function.
+
+The await keyword makes the function pause the execution and wait for a resolved promis -->
+
+<!DOCTYPE html>
+<html>
+<body>
+
+<h2>JavaScript async / await</h2>
+
+<p id="demo"></p>
+
+<script>
+  /* We all know that JavaScript is Synchronous in nature which means that it has an event loop that allows you to queue up an action that won’t take place until the loop is available sometime after the code that queued the action has finished executing.
+
+But there are a lot of functionalities in our program which make our code Asynchronous and one of them is the Async/Await functionality. Async/Await is the extension of promises which we get as support in the language.
+
+
+*/
+function myDisplayer(some) {
+  document.getElementById("demo").innerHTML = some;
+}
+
+async function myFunction() {return "Hello";}
+
+myFunction().then(
+  function(value) {myDisplayer(value);},
+  function(error) {myDisplayer(error);}
+);</script>
+
+</body>
+</html>
